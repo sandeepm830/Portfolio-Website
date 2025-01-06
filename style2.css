@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   color: #b74b4b;
 }
 
@@ -13,6 +13,94 @@ header {
   padding: 1rem 2rem;
   justify-content: space-between;
   align-items: center;
+}
+/* Add styles for the side menu */
+/* Add styles for the side menu */
+.side-menu {
+  background:rgba(255,255,255,0.5);
+  backdrop-filter: blur(1px);
+  border-radius:10px;
+  padding:px;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hide the menu by default */
+  width: clamp(200px, 30vw, 250px);
+  height: 100%;  
+  color: white;
+  transition: 0.3s;
+  z-index: 100;
+}
+
+.side-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.side-menu ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.side-menu ul li a {
+  display:block;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 01vh 02vh;
+}
+
+.side-menu ul li a:hover {
+  background-color: #575757;
+  border-radius:05%;
+  
+}
+
+#close-icon {
+  font-size: 30px;
+  color: rgb(149, 43, 43);
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  display: none; /* Hidden by default */
+}
+
+/* Show the side menu when toggled */
+.side-menu.active {
+  left: 0;
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+    color: white;
+  }
+}
+
+/* Other styles for header, main content, etc. */
+
+
+/* Show the side menu when toggled */
+.side-menu.active {
+  left: 0;
+}
+
+/* Hide the default nav links for small devices */
+nav ul {
+  display: none;
 }
 
 .logo {
